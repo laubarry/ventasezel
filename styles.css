@@ -1,0 +1,652 @@
+/* Variables convertidas a valores fijos */
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* Fuente tipo firma */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Fuente tipo firma tatuaje */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); /* Nueva fuente atractiva */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+* :focus {
+    outline: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background: #fff;
+    color: #222;
+    /* Negro suave */
+}
+
+/* --- NAVEGACIÓN PRINCIPAL --- */
+.navegacionPrincipal {
+    color: #ffffff;
+    background: #000000;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 0 40px;
+}
+
+.navegacionPrincipal__logo {
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.navegacionPrincipal__logo img,
+.logo-img {
+    height: 54px;           /* Más grande para destacar */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: none;
+    background: transparent;
+    border-radius: 4px;
+    padding: 0;
+    box-shadow: none;
+    margin-right: 8px;
+}
+
+.navegacionPrincipal__enlaces {
+    display: flex;
+}
+
+.navegacionPrincipal__enlace {
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-left: 20px;
+    font-weight: 600;
+    box-shadow: inset 0px -10px 0px rgb(69, 68, 68);
+    transition: all 0.4s ease, transform 0.2s ease;
+    padding: 2px 4px;
+    transform: translateY(0px);
+    color: #ffffff;
+}
+
+.navegacionPrincipal__enlace:hover {
+    background: #0000000b;
+    color: #0000000b;
+    box-shadow: inset 0px -20px 0px #0000000b;
+}
+
+.navegacionPrincipal__icono {
+    background-image: url(https://rafaelalucas91.github.io/assets/icons/black/icon-141.svg);
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    filter: grayscale(1);
+}
+
+/* --- ENCABEZADO PRINCIPAL --- */
+.encabezadoPrincipal {
+    background: linear-gradient(to top, #e5e5e5 0%, #fff 100%);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0 40px;
+}
+
+.encabezadoPrincipal__contenido {
+    max-width: 1110px;
+    min-height: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.encabezadoPrincipal__texto {
+    z-index: 1;
+    color: #222;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    max-width: 620px;
+    margin-top: 100px;
+    width: 70%;
+    backdrop-filter: blur(8px);
+    animation: texto 0.8s 0.6s ease backwards;
+    position: relative;
+}
+
+.encabezadoPrincipal__texto:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0;
+    left: 0;
+    animation: linea 0.8s 0.6s ease backwards;
+}
+
+@keyframes linea {
+    0% {
+        right: 0;
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes texto {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+}
+
+.encabezadoPrincipal__preTitulo {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    color: #222;
+}
+
+.encabezadoPrincipal__titulo {
+    text-transform: none;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif; /* Fuente moderna y atractiva */
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    font-size: 54px;
+    color: #222;
+    font-style: normal;
+}
+
+.encabezadoPrincipal__descripcion {
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.encabezadoPrincipal__imagen {
+    right: 0;
+    max-width: 600px;
+    width: 60%;
+    height: 600px;
+    transform: translatey(100px);
+    position: absolute;
+    overflow: hidden;
+    animation: imagen 0.6s 0.2s ease backwards;
+}
+
+@keyframes imagen {
+    0% {
+        opacity: 0;
+        transform: translatey(200px);
+    }
+}
+
+.encabezadoPrincipal__imagen:before,
+.encabezadoPrincipal__imagen:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 100%;
+    background-image: linear-gradient(to top, #bbb 0%, #e5e5e5 100%);
+    opacity: 1;
+    left: 0;
+}
+
+.encabezadoPrincipal__imagen:before {
+    animation: imagenAntes 1s 0.2s ease backwards;
+}
+
+@keyframes imagenAntes {
+    0% {
+        height: 100%;
+        top: 0;
+    }
+}
+
+.encabezadoPrincipal__imagen:after {
+    background-image: linear-gradient(to top, #bbb 0%, #e5e5e5 100%);
+    height: 100%;
+    top: 0;
+    opacity: 0.15;
+}
+
+.encabezadoPrincipal__imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    border-radius: 12px; /* Bordes suaves para mejor estética */
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+/* --- BOTÓN ACCIÓN --- */
+.botonAccion {
+    color: #fff;
+    background-color: #222;
+    border: 1px solid #222;
+    padding: 16px 32px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-top: 32px;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 0px rgba(99, 116, 152, 0.2);
+    transition: all 0.4s ease;
+}
+
+.botonAccion:hover {
+    background: #fff;
+    color: #222;
+    border: 1px solid #222;
+    box-shadow: inset 0px -80px 0px rgba(0, 0, 0, 0.07);
+}
+
+/* --- PRODUCTOS DESTACADOS --- */
+.productosDestacados {
+    padding: 60px 40px 40px 40px;
+    background: #fafafa;
+    text-align: center;
+    margin-top: 120px; /* Antes 40px, ahora más espacio */
+}
+
+.productosDestacados__titulo {
+    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #111;
+    letter-spacing: 1px;
+}
+
+.productosDestacados__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.producto {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 24px 16px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    opacity: 0; /* Para animación JS */
+    transform: translateY(40px); /* Para animación JS */
+}
+
+.producto:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+.producto img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: #e5e5e5;
+}
+
+.producto__nombre {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.producto__precio {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.producto__boton {
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+}
+
+.producto__boton:hover {
+    background: #444;
+}
+
+/* --- CATEGORÍAS --- */
+.categorias {
+    padding: 50px 0 30px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.categorias__titulo {
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #111;
+    letter-spacing: 1px;
+}
+
+.categorias__lista {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.categoria {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 18px 38px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    letter-spacing: 1px;
+}
+
+.categoria:hover {
+    background: #444;
+    color: #fff;
+    transform: scale(1.06);
+}
+
+/* RESPONSIVO PARA CELULARES */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+
+    .navegacionPrincipal {
+        padding: 0 10px;
+        height: 60px;
+    }
+
+    .navegacionPrincipal__logo img {
+        height: 38px;
+    }
+
+    .encabezadoPrincipal {
+        padding: 80px 10px 20px 10px;
+        min-height: 400px;
+    }
+
+    .encabezadoPrincipal__contenido {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .encabezadoPrincipal__texto {
+        padding: 18px;
+        margin: 0 0 18px 0;
+        max-width: 100%;
+    }
+
+    .encabezadoPrincipal__titulo {
+        font-size: 28px;
+    }
+
+    .encabezadoPrincipal__imagen {
+        height: 140px;
+        max-width: 180px;
+        margin-bottom: 10px;
+    }
+
+    .productosDestacados {
+        padding: 40px 10px 20px 10px;
+        margin-top: 80px;
+    }
+
+    .productosDestacados__lista {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .producto {
+        width: 90vw;
+        max-width: 260px;
+        padding: 16px 6px;
+    }
+
+    .categorias {
+        padding: 30px 0 20px 0;
+    }
+
+    .categorias__lista {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .categoria {
+        width: 80vw;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 14px 0;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .navegacionPrincipal {
+        padding: 0 20px;
+    }
+
+    .navegacionPrincipal__enlaces {
+        display: none;
+    }
+
+    .navegacionPrincipal__icono {
+        display: block;
+    }
+
+    .encabezadoPrincipal {
+        padding: 0 20px;
+    }
+
+    .encabezadoPrincipal__contenido {
+        min-height: 500px;
+    }
+
+    .encabezadoPrincipal__texto {
+        padding: 20px;
+        margin: 90px 0 40px 0;
+    }
+
+    .encabezadoPrincipal__titulo {
+        margin-bottom: 16px;
+        font-size: 28px;
+    }
+
+    .encabezadoPrincipal__descripcion {
+        font-size: 14px;
+    }
+
+    .encabezadoPrincipal__imagen {
+        height: 480px;
+        width: 70%;
+        transform: translatey(80px);
+        right: -6%;
+    }
+
+    .botonAccion {
+        margin-top: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .productosDestacados__lista {
+        gap: 20px;
+    }
+}
+
+/* Responsive nav para móviles */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+  nav ul li a {
+    display: block;
+    padding: 12px 16px;
+    width: 100%;
+  }
+}
+
+/* Oculta los enlaces del nav en móviles y muestra el botón hamburguesa */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2em;
+    margin: 10px;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+  }
+
+  .navegacionPrincipal__enlaces {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 60px; /* ajusta según tu diseño */
+    left: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  nav.active .navegacionPrincipal__enlaces {
+    display: flex;
+  }
+
+  .navegacionPrincipal__enlace {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navegacionPrincipal__logo,
+  .navegacionPrincipal__icono {
+    z-index: 101;
+  }
+}
+
+/* Mejora visual del menú móvil */
+@media (max-width: 768px) {
+  nav.navegacionPrincipal {
+    position: relative;
+    background: #000000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 10px 0;
+  }
+
+  .navegacionPrincipal__logo {
+    margin-left: 16px;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    z-index: 200;
+    background: #fff;
+    border: none;
+    font-size: 2em;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 4px;
+    padding: 4px 8px;
+  }
+
+  .navegacionPrincipal__enlaces {
+    position: absolute;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    z-index: 150;
+  }
+
+  nav.active .navegacionPrincipal__enlaces {
+    display: flex;
+  }
+
+  .navegacionPrincipal__enlace {
+    width: 100%;
+    padding: 16px 24px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background 0.2s;
+  }
+
+  .navegacionPrincipal__enlace:hover {
+    background: #f5f5f5;
+  }
+
+  .navegacionPrincipal__icono {
+    display: none;
+  }
+}
